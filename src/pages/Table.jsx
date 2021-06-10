@@ -1,9 +1,10 @@
 import React from 'react';
+import Table from 'react-bootstrap/Table'
 
 const TableView = ({mockData}) => {
       
     const getKeys = () => {
-        return Object.keys(mockData[0]);
+        return Object.keys(mockData?.[0]);
     }
     
     const getHeader = () => {
@@ -21,15 +22,16 @@ const TableView = ({mockData}) => {
         })
     }
     return (
-    <div>
-        <table>
+    <div className="table-view">
+        { mockData && 
+        <Table>
         <thead>
         <tr>{getHeader()}</tr>
         </thead>
         <tbody>
         {getRowsData()}
         </tbody>
-        </table>
+        </Table>}
     </div>
     
     );
