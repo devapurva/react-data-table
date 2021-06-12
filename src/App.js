@@ -21,7 +21,7 @@ const App = () => {
   const filterData = () => {
     const inputCheck = searchInput.match(regex)
     let data = selectedData === 1 ? mockDataOne : mockDataTwo;
-    console.log(data)
+    // console.log(data)
     if(inputCheck){
       data = mockData?.filter(el => el?.location === searchInput.split('"').join('') || el?.name === searchInput.split('"').join('') || el?.company === searchInput.split('"').join(''))
       setMockData(data)

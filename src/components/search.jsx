@@ -7,7 +7,7 @@ import FormControl from 'react-bootstrap/FormControl'
 const SearchContainer = ({setSearchInput, onSearch}) => {
 
     const setSearch = (e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         setSearchInput(e.target.value);
     } 
 
@@ -19,7 +19,7 @@ const SearchContainer = ({setSearchInput, onSearch}) => {
             onChange={setSearch}
         />
         <InputGroup.Append>
-          <Button onClick={onSearch} variant="outline-secondary">Search</Button>
+            <Button onClick={onSearch} variant="outline-secondary">Search</Button>
         </InputGroup.Append>
     </InputGroup>
     )
