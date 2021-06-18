@@ -10,9 +10,7 @@ const regex = /^["].*?["]$/;
 const TableView = () => {
     const [selectedData, setSelectedData] = useState(1);
     const [searchInput, setSearchInput] = useState(null);
-    const [mockData, setMockData] = useState(
-        (MockDataOne = { ...mockDataOne })
-    );
+    const [mockData, setMockData] = useState(mockDataOne);
 
     useEffect(
         () => setMockData(selectedData === 1 ? mockDataOne : mockDataTwo),
